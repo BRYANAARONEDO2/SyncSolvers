@@ -14,6 +14,9 @@ public class Pajaro extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        /*
+        
+        ASDFGHJKLJKHHFDXASDFGHJKLHGFDVSCAXASCDVFBGNHJM
+        Add your action code here*/
     }
 }

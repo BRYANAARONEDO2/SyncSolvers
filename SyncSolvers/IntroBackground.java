@@ -17,5 +17,7 @@ public class IntroBackground extends MyWorld
     {
         Planeta p = new Planeta();
         addObject(p,283,206);        
+        PlayButton pb = new PlayButton();
+        addObject(pb,283,206); 
     }
 }

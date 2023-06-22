@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Block extends Entity {
     public Block(int width, int height) {
-        super(width, height, false);
+        super(width, height);
     }
     
     public void act() {

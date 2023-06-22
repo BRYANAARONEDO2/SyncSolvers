@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 public class Player extends Entity {
-    private static final int SPEED = 5;
-    private static final int GRAVITY = 1;
-    private static final int MAX_JUMP_HEIGHT = 10;
-    private int velocity = 0;
+    private static final int horizontalSpeed = 5;
+    private static final int gravity = 1;
+    private static final int maxJumpHeight = 10;
+    private int verticalSpeed = 0;
     private int jumpCont = 0;
     private boolean jump = false;
     private boolean toLeft = false;
@@ -21,20 +21,20 @@ public class Player extends Entity {
     
     private void applyGravity() {
         if (!inGround) {
-            velocity += GRAVITY;
+            verticalSpeed += gravity;
         }
         
-        if (jump && velocity >= 0) {
+        if (jump && verticalSpeed >= 0) {
             jump = false; // Stop the jump if it reaches the maximum height
         }
     }
     
     private void checkJump() {
         if (Greenfoot.isKeyDown("up") && inGround) {
-            jumpCont = MAX_JUMP_HEIGHT;
+            jumpCont = maxJumpHeight;
             jump = true;
             inGround = false;
-            velocity = -MAX_JUMP_HEIGHT;
+            verticalSpeed = -maxJumpHeight;
         }
     }
     
@@ -42,11 +42,11 @@ public class Player extends Entity {
         int dx = 0;
         if (Greenfoot.isKeyDown("left")) {
             this.toLeft = true;
-            dx -= SPEED;
+            dx -= horizontalSpeed;
         }
         if (Greenfoot.isKeyDown("right")) {
             this.toLeft = false;
-            dx += SPEED;
+            dx += horizontalSpeed;
         }
         setLocation(getX() + dx, getY());
     }
@@ -63,15 +63,15 @@ public class Player extends Entity {
         Entity gdBlock = (Entity) getOneIntersectingObject(Ground.class);
     
         if (gdBlock != null) {
-            if (velocity > 0 && gdBlock.getY() > getY()) {
+            if (verticalSpeed > 0 && gdBlock.getY() > getY()) {
                 setLocation(getX(), gdBlock.getY() - getHeight() + 6);
-                velocity = 0;
+                verticalSpeed = 0;
                 jump = false;
                 inGround = true;
             }
-            if (velocity < 0 && gdBlock.getY() < getY()) {
+            if (verticalSpeed < 0 && gdBlock.getY() < getY()) {
                 setLocation(getX(), gdBlock.getY() + gdBlock.getHeight());
-                velocity = 0;
+                verticalSpeed = 0;
                 jump = false;
                 inGround = false;
             }
@@ -100,7 +100,7 @@ public class Player extends Entity {
         }
     
         if (!inGround) {
-            setLocation(getX(), getY() + velocity);
+            setLocation(getX(), getY() + verticalSpeed);
         }
     }
 

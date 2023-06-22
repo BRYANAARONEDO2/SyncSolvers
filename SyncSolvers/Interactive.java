@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Interactive extends Block
 {
+    Interactive() {
+        super(50,50);
+    }
     Interactive(int width, int height) {
         super(width, height);
     }

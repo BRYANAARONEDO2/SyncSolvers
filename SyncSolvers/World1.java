@@ -11,7 +11,7 @@ public class World1 extends SubWorlds
 
     /**
      * Constructor for objects of class World1.
-     * 
+     
      */
     public World1()
     {

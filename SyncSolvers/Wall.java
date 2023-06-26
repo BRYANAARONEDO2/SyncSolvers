@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Wall extends Block
 {
-    Wall(int width, int height) {
-        super(width, height);
+    Wall(int longitude) {
+        super(1, longitude);
     }
     /**
      * Act - do whatever the Wall wants to do. This method is called whenever

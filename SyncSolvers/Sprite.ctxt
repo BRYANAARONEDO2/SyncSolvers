@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Sprite
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Sprite\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=img\ e\ scale
+comment1.target=Sprite(greenfoot.GreenfootImage,\ Entity,\ double)
+comment2.params=img\ scale
+comment2.target=Sprite(greenfoot.GreenfootImage,\ double)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

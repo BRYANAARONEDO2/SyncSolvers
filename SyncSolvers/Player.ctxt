@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=Player
 comment1.params=
-comment1.target=void\ act()
+comment1.target=Player()
 comment2.params=
-comment2.target=void\ applyGravity()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ checkJump()
+comment3.target=void\ applyGravity()
 comment4.params=
-comment4.target=void\ handleMovement()
+comment4.target=void\ checkJump()
 comment5.params=
-comment5.target=void\ handleCollision()
-numComments=6
+comment5.target=void\ handleMovement()
+comment6.params=
+comment6.target=void\ handleCollision()
+numComments=7

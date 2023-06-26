@@ -11,6 +11,15 @@ public class Block extends Entity {
         super(width, height);
     }
     
+    public Block(int width) {
+        super(width, width);
+    }
+    
+    public int verticalHitbox(Player player){
+        
+        return 1;
+    }
+    
     public void act() {
         // Code for acting can go here
     }

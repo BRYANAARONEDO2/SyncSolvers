@@ -89,9 +89,13 @@ public class TestLevel extends Level
         addObject(wall4,1641,709);
         wall4.setLocation(1648,651);
 
-        
         ground16.setLocation(1455,864);
         ground16.setLocation(1528,835);
+        
+        Ground ground17 = new Ground(30);
+        addObject(ground17,440,221);
+        ground17.setLocation(430,229);
+        
         super.setCamera(player);
     }
 }

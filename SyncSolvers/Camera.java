@@ -40,6 +40,7 @@ public class Camera extends World
         fixedToWorld = false;
         setGhosts();
         setBackground();
+        prepare();
     }
 
     /**
@@ -276,5 +277,18 @@ public class Camera extends World
         public Ghost(GreenfootImage i){
             setImage(i);
         }
+    }
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Ground ground = new Ground(40);
+        addObject(ground,458,155);
+        ground.setLocation(460,153);
+        ground.setLocation(458,145);
+        ground.setLocation(479,99);
+        removeObject(ground);
     }
 }

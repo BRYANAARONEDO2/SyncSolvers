@@ -9,7 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ground extends Block
 {
     Ground(int longitude) {
-        super(longitude, 1);
+        super(longitude, 20);
+    }
+    
+    Ground() {
+        super(200, 20);
     }
     /**
      * Act - do whatever the Ground wants to do. This method is called whenever

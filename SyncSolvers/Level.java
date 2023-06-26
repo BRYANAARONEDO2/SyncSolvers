@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import camera.*;
 
 /**
  * Write a description of class Level here.
@@ -32,7 +31,7 @@ public class Level extends World
     public Level()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1200, 2000, 1);
+        super(2000, 1200, 1);
         
     }
 

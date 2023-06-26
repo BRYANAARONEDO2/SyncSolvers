@@ -14,7 +14,7 @@ public class Entity extends Actor {
         double tmp = (double)img.getHeight() / (double)img.getWidth(); 
         this.width = widthOfHitbox;
         this.height = (int)((double)widthOfHitbox * tmp);
-        img.scale(this.width, this.height);
+        //img.scale(this.width, this.height);
         this.texture = new Sprite(img, this, scale);
         drawEntity();
     }
@@ -46,35 +46,39 @@ public class Entity extends Actor {
     }
     
     public int getTop(){
-        return getY() - this.getHeight() / 2;
+        return getY() - (this.getHeight() / 2);
     }
     
     public void setLeft(int x){
-        setLocation(x + this.getHeight() / 2, getY());
+        setLocation(x + (this.getWidth() / 2), getY());
     }
     
     public int getLeft(){
-        return getX() - this.getHeight() / 2;
+        return getX() - (this.getWidth() / 2);
     }
 
     public void setBotton(int y){
-        setLocation(getX(), y - this.getHeight() / 2);
+        setLocation(getX(), y - (this.getHeight() / 2));
     }
     
     public int getBotton(){
-        return getY() + this.getHeight() / 2;
+        return getY() + (this.getHeight() / 2);
     }
     
     public void setRight(int x){
-        setLocation(x - this.getHeight() / 2, getY());
+        setLocation(x - (this.getWidth() / 2), getY());
     }
     
     public int getRight(){
-        return getX() + this.getHeight() / 2;
+        return getX() + (this.getWidth() / 2);
     }
     
     public void drawTexture(){
         this.getWorld().addObject(this.texture, 0, 0);
+    }
+    
+    public Sprite getTexture(){
+        return this.texture;
     }
     
     public void act() {

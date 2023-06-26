@@ -1,9 +1,10 @@
-package camera;
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * This is the Camera class. It is the central part of the camera
  * package as it runs the background world and displays the
  * things on screen. It extends the World class.
+ * 
  * Camera is currently in development. Splitscreen support
  * is planned and you will find some parts of code  of that
  * but it does not do anything yet.
@@ -228,40 +229,6 @@ public class Camera extends World
         Greenfoot.setWorld(next);
         return next;
     }
-
-    /**
-     * Zooms in the camera by a given factor.
-     * 
-     * @param factor The zoom factor
-     */
-    public void zoomIn(double factor) {
-        s *= factor;
-        adjustZoom();
-    }
-    
-    /**
-     * Zooms out the camera by a given factor.
-     * 
-     * @param factor The zoom factor
-     */
-    public void zoomOut(double factor) {
-        s /= factor;
-        adjustZoom();
-    }
-    
-    /**
-     * Adjusts the zoom level of the camera and updates the display.
-     */
-    private void adjustZoom() {
-        int newWidth = (int) (x * s);
-        int newHeight = (int) (y * s);
-        resize(newWidth, newHeight);
-        setGhosts();
-        setBackground();
-    }
-
-
-
 
     /**
      * This is the Ghost class. It is part of the camera package and

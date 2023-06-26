@@ -8,8 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class IntroMenu extends World
 {
-
+    PlayButton pb = new PlayButton();
    public IntroMenu(){
+       
+         
        super(600, 400, 1); 
        prepare();
         
@@ -18,8 +20,10 @@ public class IntroMenu extends World
     {
         Planeta p = new Planeta();
         addObject(p,283,206);        
-        Actor pb = new PlayButton();
-        addObject(pb,283,206); 
+        addObject(pb,283,206);
+       
+    }
+    public void act(){
         if(Greenfoot.mouseClicked(pb)){
             SubWorlds worldmenu = new SubWorlds();
             Greenfoot.setWorld(worldmenu);
